@@ -24,11 +24,12 @@ export async function chakatiFire(opts) {
   };
 
   const fullPathName = new URL(import.meta.url).pathname;
-  const templateDir = path.resolve(
+  let templateDir = path.resolve(
     fullPathName.substr(fullPathName.indexOf("/")),
     "../../templates",
     opts.template.toLowerCase()
   );
+  templateDir = templateDir.substring(3);
   opts.templateDirectory = templateDir;
 
   try {
