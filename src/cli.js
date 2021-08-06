@@ -1,5 +1,6 @@
 import arg from "arg";
 import inquirer from "inquirer";
+import { chakatiFire } from "./main.js";
 
 function parseArgumnetsOptions(rawArguments) {
   let args = arg(
@@ -64,5 +65,6 @@ async function promptErrorMissingOpts(opts) {
 export async function cli(args) {
   let opts = parseArgumnetsOptions(args);
   opts = await promptErrorMissingOpts(opts);
-  console.log(opts);
+  // console.log(opts);
+  await chakatiFire(opts);
 }

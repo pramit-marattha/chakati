@@ -17,7 +17,7 @@ async function copyTemplateFiles(opts) {
   });
 }
 
-export async function createProject(opts) {
+export async function chakatiFire(opts) {
   opts = {
     ...opts,
     targetDirectory: opts.targetDirectory || process.cwd(),
