@@ -20,6 +20,7 @@ function parseArgumnetsOptions(rawArguments) {
     skipPrompts: args["--yes"] || false,
     git: args["--git"] || false,
     template: args._[0] || "default",
+    runInstall: args["--install"] || false,
   };
 }
 
