@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import npc from "npc";
+import ncp from "ncp";
 import { promisify } from "util";
 
 // access
