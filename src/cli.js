@@ -25,5 +25,6 @@ function parseArgumnetsOptions(rawArguments) {
 }
 
 export function cli(args) {
-  console.log(args);
+  let opts = parseArgumnetsOptions(args);
+  console.log(opts);
 }
