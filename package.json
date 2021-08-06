@@ -4,8 +4,8 @@
   "description": "A Command Line Interface ( to automatically setup pre-configured JavaScript initial project template ) crafted using NodeJS and external third-party library",
   "main": "src/index.js",
   "bin": {
-    "@pramit/chakti-fire": "bin/chakati-fire",
-    "chakti-fire": "bin/chakti-fire"
+    "@pramit/chakati-fire": "bin/chakati-fire",
+    "chakati-fire": "bin/chakati-fire"
   },
   "publishConfig": {
     "access": "public"
@@ -24,7 +24,7 @@
     "project",
     "files",
     "auto-generator",
-    "chakti-fire"
+    "chakati-fire"
   ],
   "author": "",
   "license": "ISC",
