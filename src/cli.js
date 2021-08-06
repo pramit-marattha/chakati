@@ -31,7 +31,7 @@ async function promptErrorMissingOpts(opts) {
   if (opts.skipPrompts) {
     return {
       ...opts,
-      template: options.template || defaultTemplate,
+      template: opts.template || defaultTemplate,
     };
   }
   const displayOptions = [];

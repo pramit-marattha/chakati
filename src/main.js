@@ -23,9 +23,9 @@ export async function chakatiFire(opts) {
     targetDirectory: opts.targetDirectory || process.cwd(),
   };
 
-  const currentTargetFileUrl = import.meta.url;
+  const fullPathName = new URL(import.meta.url).pathname;
   const templateDir = path.resolve(
-    new URL(currentTargetFileUrl).pathname,
+    fullPathName.substr(fullPathName.indexOf("/")),
     "../../templates",
     opts.template.toLowerCase()
   );
@@ -35,6 +35,7 @@ export async function chakatiFire(opts) {
     await access(templateDir, fs.constants.R_OK);
   } catch (err) {
     console.log(chalk.red(`Template directory ${templateDir} does not exist`));
+    console.log(err);
     process.exit(1);
   }
 

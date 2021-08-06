@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "pramitmarattha",
-  "license": "MIT"
+  "author": "pramit marattha",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.18"
+  }
 }
