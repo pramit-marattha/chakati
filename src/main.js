@@ -12,7 +12,7 @@ const copy = promisify(ncp);
 
 // async function to copy template files
 async function copyTemplateFiles(opts) {
-  return copy(options.templateDirectory, opts.targetDirectory, {
+  return copy(opts.templateDirectory, opts.targetDirectory, {
     clobber: false,
   });
 }
@@ -26,7 +26,7 @@ export async function chakatiFire(opts) {
   const currentTargetFileUrl = import.meta.url;
   const templateDir = path.resolve(
     new URL(currentTargetFileUrl).pathname,
-    "../../projectTemplates/",
+    "../../templates",
     opts.template.toLowerCase()
   );
   opts.templateDirectory = templateDir;
