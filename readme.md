@@ -41,7 +41,3 @@ npx chakati-fire react --git --install
 ## license
 
 MIT
-
-```
-
-```
