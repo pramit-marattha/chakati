@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://user-images.githubusercontent.com/37651620/128396800-bc6b91df-be78-4c5a-9f2f-0be7ef5a2ba3.png" width=400>
+<img src="https://user-images.githubusercontent.com/37651620/128588248-8ad47c14-d272-47ae-94dc-7eadb7c61ca0.png" width=300>
 </p>
 
 ###### Command Line Interface ( to automatically setup pre-configured JavaScript initial project template ) crafted using NodeJS and external third-party library like:
