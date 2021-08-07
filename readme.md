@@ -10,3 +10,5 @@
 - chalk (for coloring output commands)
 - execa (for running external commands)
 - listr (for specifying list of tasks)
+
+⚠️ This is not for developing production application.

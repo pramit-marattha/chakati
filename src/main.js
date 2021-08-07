@@ -13,8 +13,22 @@ const access = promisify(fs.access);
 // reccusive copy
 const copy = promisify(ncp);
 
+async function initializeGit(opts) {
+  const result = await execa("git", ["init"], {
+    cwd: opts.targetDirectory,
+  });
+  if (result.failed) {
+    console.error(chalk.red("Failed to initialize git repository"));
+    return Promise.reject(
+      new Error(`Failed to initialize git repository: ${result.stderr}`)
+    );
+    process.exit(1);
+  }
+  return;
+}
+
 // async function to copy template files
-async function copyTemplateFiles(opts) {
+async function copyProjectTemplateFiles(opts) {
   return copy(opts.templateDirectory, opts.targetDirectory, {
     clobber: false,
   });
@@ -43,8 +57,31 @@ export async function chakatiFire(opts) {
     process.exit(1);
   }
 
-  console.log("Copy project files");
-  await copyTemplateFiles(opts);
+  // console.log("Copy project files");
+  // await copyProjectTemplateFiles(opts);
+  const runningTask = new Listr([
+    {
+      title: "Copy project files",
+      task: async () => await copyProjectTemplateFiles(opts),
+    },
+    {
+      title: "Initialize git repository",
+      task: async () => await initializeGit(opts),
+      enabled: () => opts.git,
+    },
+    {
+      title: "Install dependencies",
+      task: async () =>
+        await projectInstall({
+          cwd: opts.targetDirectory,
+        }),
+      skip: () =>
+        !opts.runInstall ? "--install to install all dependencies" : undefined,
+    },
+  ]);
+
+  await runningTask.run();
+
   console.log(chalk.green(`Creating project from template ${opts.template}`));
   return true;
 }
