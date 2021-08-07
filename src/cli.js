@@ -40,7 +40,7 @@ async function promptErrorMissingOpts(opts) {
       type: "list",
       name: "template",
       message: "What template would you like to use?",
-      choices: ["JavaScript"],
+      choices: ["React", "JavaScript"],
       default: defaultTemplate,
     });
   }
