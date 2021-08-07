@@ -18,8 +18,6 @@
 ## Installation Guide
 
 ```
-npm i chakati-fire
-
 npx chakati-fire
 
 ```
