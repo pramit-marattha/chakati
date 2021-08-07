@@ -14,3 +14,34 @@
 <h4 align="center">
 ⚠️ This is not for developing production application.
 </h4>
+
+## Installation Guide
+
+```
+npm i chakati-fire
+
+npx chakati-fire
+
+```
+
+### Generating template with initilized GIT
+
+```
+npx chakati-fire react --git
+
+```
+
+### Generating template with initilized GIT and installing all dpendencies.
+
+```
+npx chakati-fire react --git --install
+
+```
+
+## license
+
+MIT
+
+```
+
+```
