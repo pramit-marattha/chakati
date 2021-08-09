@@ -22,17 +22,66 @@ npx chakati-fire
 
 ```
 
+or (generating javascript)
+
+```
+npx chakati-fire javascript
+
+```
+
+or(generating create-react-app)
+
+```
+npx chakati-fire react
+
+```
+
+or(generating vite react) [Highly recommended]
+
+```
+npx chakati-fire vitamin
+
+```
+
 ### Generating template with initilized GIT
+
+```
+npx chakati-fire javascript --git
+
+```
+
+---
 
 ```
 npx chakati-fire react --git
 
 ```
 
+---
+
+```
+npx chakati-fire vitamin --git
+
+```
+
 ### Generating template with initilized GIT and installing all dpendencies.
 
 ```
+npx chakati-fire javascript --git --install
+
+```
+
+---
+
+```
 npx chakati-fire react --git --install
+
+```
+
+---
+
+```
+npx chakati-fire vitamin --git --install
 
 ```
 
