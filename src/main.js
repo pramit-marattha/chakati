@@ -61,16 +61,16 @@ export async function chakatiFire(opts) {
   // await copyProjectTemplateFiles(opts);
   const runningTask = new Listr([
     {
-      title: "Copy project files",
+      title: "Hold up!! Copying project files...",
       task: async () => await copyProjectTemplateFiles(opts),
     },
     {
-      title: "Initialize git repository",
+      title: "Waitt!!! Initializing git repository....",
       task: async () => await initializeGit(opts),
       enabled: () => opts.git,
     },
     {
-      title: "Install dependencies",
+      title: "REEEEEEE!! Installing dependencies....",
       task: async () =>
         await projectInstall({
           cwd: opts.targetDirectory,
